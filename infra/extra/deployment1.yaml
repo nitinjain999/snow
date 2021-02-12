@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: nitinjain08/snow:v5
+        command:
+        - python
+        - -c
+        - "import os;print(os.environ['db_name']);print(os.environ['db_ep']);print(os.environ['db_user']);print(os.environ['db_password'])"
+        env:
+        - name: db_name
+          valueFrom:
+            secretKeyRef:
+              name: myapp-secret
+              key: db_name
+        - name: db_user
+          valueFrom:
+            secretKeyRef:
+              name: myapp-secret
+              key: db_user
+        - name: db_password
+          valueFrom:
+            secretKeyRef:
+              name: myapp-secret
+              key: db_password
+        - name: db_ep
+          valueFrom:
+            secretKeyRef:
+              name: myapp-secret
+              key: db_ep
+        ports:
+        - containerPort: 5000
