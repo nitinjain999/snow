@@ -24,7 +24,7 @@ resource "helm_release" "myapp" {
   name  = "myapp"
   depends_on = [helm_release.mysql]
   namespace = "snow"
-  chart = "../myapp_chart/myapp"
+  chart = "/Users/nitin.jain/Desktop/nitin/git/snow/infra/myapp_chart/myapp"
   set {
     name = "service.type"
     value = "LoadBalancer"
@@ -45,5 +45,12 @@ resource "helm_release" "myapp" {
     name = "secret.endpoint"
     value = var.endpoint
   }
+  set {
+    name = "image.tag"
+    value = "v7"
+  }
+  set {
+    name = "image.repository"
+    value = "nitinjain08/snow"
+  }
 }
-
