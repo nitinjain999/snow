@@ -7,17 +7,17 @@ resource "helm_release" "mysql" {
   create_namespace = "true"
   set {
     name  = "auth.database"
-    value = "test_db"
+    value = var.name
   }
 
   set {
     name  = "auth.username"
-    value = "test_db_username"
+    value = var.username
   }
 
   set {
     name  = "auth.password"
-    value = "test_db_password"
+    value = var.password
   }
 }
 resource "helm_release" "myapp" {
@@ -31,19 +31,19 @@ resource "helm_release" "myapp" {
   }
   set {
     name = "secret.name"
-    value = "test_db"
+    value = var.name
   }
   set {
     name = "secret.user"
-    value = "test_db_username"
+    value = var.username
   }
   set {
     name = "secret.password"
-    value = "test_db_password"
+    value = var.password
   }
   set {
     name = "secret.endpoint"
-    value = "mysql.snow"
+    value = var.endpoint
   }
 }
 
