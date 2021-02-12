@@ -19,4 +19,3 @@ Steps to be performed on Mac Terminal:
 \# curl 127.0.0.1:80/getdata/1 
 \# or open on browser. "http://127.0.0.1:80/getdata/1"
 
-
