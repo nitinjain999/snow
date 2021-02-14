@@ -24,7 +24,7 @@ resource "helm_release" "myapp" {
   name  = "myapp"
   depends_on = [helm_release.mysql]
   namespace = "snow"
-  chart = "/Users/nitin.jain/Desktop/nitin/git/snow/infra/myapp_chart/myapp"
+  chart = "./myapp_chart/myapp"
   set {
     name = "service.type"
     value = "LoadBalancer"
