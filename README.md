@@ -6,7 +6,7 @@
 ​
 3) Terraform & Helm installed
 ​
-> **ProTip: (1# brew install kubernetes-helm)**
+> **ProTip: (1# brew install helm)**
 ​
 > **ProTip:(2# brew install terraform)**
 ​
