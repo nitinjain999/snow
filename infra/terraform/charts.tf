@@ -47,7 +47,7 @@ resource "helm_release" "myapp" {
   }
   set {
     name = "image.tag"
-    value = "v7"
+    value = "v6"
   }
   set {
     name = "image.repository"
