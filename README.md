@@ -18,7 +18,7 @@
 ​
 3)  cd snow/infra/terraform
 ​
-4) terraform init (config path is choosen to config_path = "~/.kube/config", if this is different from default please change it)
+4) terraform init (config path is choosen to config_path = "~/.kube/config", if this is different from default please change it providers.tf)
 ​
 5)  terraform apply -auto-approve
 ​
