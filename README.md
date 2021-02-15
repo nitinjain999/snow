@@ -12,7 +12,7 @@
 ​
 # Steps to be performed on Mac Terminal:
 ​
-1)  minikube tunnel
+1)  minikube tunnel (in a seperate terminal)
 ​
 2)  git clone https://github.com/nitinjain999/snow.git
 ​
