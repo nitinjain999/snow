@@ -32,7 +32,7 @@
 |mysql-0         |1/1            |Running            |             0                |          11m                   | 
 ​
 ​
-# In terminal "minikube tunnel" , it will prompt for user password 
+In terminal "minikube tunnel" , it will prompt for user password 
 6) On Browser open http://127.0.0.1
 ​
 7) Insert Data
